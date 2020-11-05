@@ -1,0 +1,23 @@
+.board {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.board > button:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.board > button:nth-child(3n) {
+  border-right: none;
+}
+
+.board > button:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+.board > button:nth-child(1n) {
+  border-left: none;
+}
