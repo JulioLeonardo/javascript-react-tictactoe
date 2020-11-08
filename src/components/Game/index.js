@@ -1,6 +1,7 @@
 import { useState } from "react";
 import calculateWinner from "../../utils/calculateWinner";
 import Board from "../Board";
+import "./styles.css";
 
 export default function Game() {
   const [boardHistory, setBoardHistory] = useState([Array(9).fill(null)]);
@@ -30,7 +31,7 @@ export default function Game() {
   const startHumanVsAIgame = () => {};
 
   return (
-    <>
+    <div className="game">
       <div className="display-and-controls">
         <p>
           {winner
@@ -47,6 +48,6 @@ export default function Game() {
         </button>
       </div>
       <Board squares={currentBoard} onClick={handleClickHuman} />
-    </>
+    </div>
   );
 }
