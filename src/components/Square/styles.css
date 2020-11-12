@@ -1,5 +1,8 @@
 .square {
-  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid gray;
   float: left;
   margin-right: -1px;
   margin-top: -1px;

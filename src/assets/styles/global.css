@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,8 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(243, 243, 243);
+  font-family: "Roboto", sans-serif;
 }
 
 #root {
@@ -21,8 +25,14 @@ body,
 button {
   outline: none;
   cursor: pointer;
+  border: none;
+  background: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
 }
 
 button:hover {
   opacity: 0.8;
+  background-color: rgb(228, 228, 228);
 }

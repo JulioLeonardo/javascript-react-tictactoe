@@ -80,6 +80,7 @@ export default function Game() {
 
   return (
     <div className="game">
+      <h1 className="title">TIC TAC TOE</h1>
       <div className="display-and-controls">
         <div className="display">
           <p>
@@ -92,13 +93,17 @@ export default function Game() {
         </div>
         <div className="controls">
           {humanGame && (
-            <button onClick={() => previousMove()}>Previous Move</button>
+            <button onClick={() => previousMove()}>
+              Previous <br /> Move
+            </button>
           )}
           <button onClick={() => startHumanVsHumanGame()}>
-            Start Human x Human Game
+            Human x Human <br />
+            Game
           </button>
           <button onClick={() => startHumanVsAIgame()}>
-            Start Human x AI Game
+            Human x AI <br />
+            Game
           </button>
         </div>
       </div>

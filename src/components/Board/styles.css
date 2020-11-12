@@ -8,6 +8,7 @@
 
 .board > button:nth-child(-n + 3) {
   border-top: none;
+  border-bottom: none;
 }
 
 .board > button:nth-child(3n) {
@@ -15,6 +16,7 @@
 }
 
 .board > button:nth-last-child(-n + 3) {
+  border-top: none;
   border-bottom: none;
 }
 
