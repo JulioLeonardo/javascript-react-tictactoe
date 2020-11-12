@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="./src/assets/img/BannerTicTacToe.jpg" alt="Banner" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://api.netlify.com/api/v1/badges/2d793fec-077f-4cd5-81d5-2f856fbbd2c1/deploy-status" alt="netlify-badge" />
+</p>
 
-## Available Scripts
+<h1 align="center">
+ <a href="#screenshot">Screenshot</a> •
+ <a href="#requisites">Requisites</a> • 
+ <a href="#running">Running The App</a> • 
+ <a href="#technologies">Technologies</a> • 
+ <a href="#author">Author</a> • 
+ <a href="#licence">License</a>
 
-In the project directory, you can run:
+</h1>
 
-### `yarn start`
+<h4 align="center"> 
+	Project deployed through Netlify on: <a href="https://hardcore-shirley-781fda.netlify.app/" target="_blank">Tic Tac Toe</a>  
+</h4>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h1 id="screenshot">
+	Screenshot
+</h1>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h1 align="center" >
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/img/screenshot.PNG" height="550" />
+  
+</h1>
 
-### `yarn test`
+<h1 id="requisites">
+	Requisites
+</h1>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>
+Before you begin, you will need to have the following tools installed on your machine:
+<a href="https://git-scm.com" target="_blank">Git</a>, <a href="https://nodejs.org/en/" target="_blank">Node.js</a> <br>
+In addition, it is good to have an editor to work with the code as <a href="https://code.visualstudio.com/" target="_blank">VScode</a>
+</p>
 
-### `yarn build`
+<h1 id="running">
+	Running the App
+</h1>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone this Repo
+$ git clone https://github.com/JulioLeonardo/javascript-react-github-org-finder
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Access the folder of this project through terminal/cmd
+$ cd javascript-react-titactoe
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Open the folder on VScode
+$ code .
 
-### `yarn eject`
+# Open the terminal with ctrl + ' and install all dependencies
+$ yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Run the App in Development mode
+$ yarn start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# The App will start at http://localhost:3000
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h1 id="technologies">
+	Technologies
+</h1>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## Learn More
+- [JavaScript](https://www.ecma-international.org/publications/standards/Ecma-006.htm)
+- [React](https://pt-br.reactjs.org/)
+- [Prettier](https://prettier.io/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h1 id="author">
+	Author
+</h1>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href="https://github.com/JulioLeonardo">
+ <img style="border-radius: 50%;" src="https://i.imgur.com/5HQ9tWb.png?1" width="100px;" alt=""/>
+ <br />
+ <sub><b>Julio Leonardo</b></sub></a> <a href="https://github.com/JulioLeonardo" title="Julio">🚀</a>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Made with ❤️ by Julio Leonardo 👋🏽 Get in touch!
 
-### Analyzing the Bundle Size
+[![Linkedin Badge](https://img.shields.io/badge/-Julio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/JulioLeonardoCarvalho/)](https://www.linkedin.com/in/JulioLeonardoCarvalho/) 
+[![Gmail Badge](https://img.shields.io/badge/-juleolica@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:juleolica@gmail.com)](mailto:juleolica@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<h1 id="license">
+	License
+</h1>
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://img.shields.io/badge/license-MIT-green" alt="lcense"/>
