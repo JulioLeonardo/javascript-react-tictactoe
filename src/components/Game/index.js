@@ -30,7 +30,7 @@ export default function Game() {
       const random = Math.floor(Math.random() * 9);
       if (!squares[random]) {
         index = random;
-        console.log(index);
+
         squareValue = false;
       }
     }
@@ -43,9 +43,7 @@ export default function Game() {
     setBoardHistory([...boardHistory, squares]);
     setStepNumber(boardHistory.length);
     setXisNext(!xIsNext);
-    console.log("AI", boardHistory, stepNumber);
   };
-  console.log("AI fora", boardHistory, stepNumber);
 
   const handleClickAI = (i) => {
     const timeInHistory = boardHistory.slice(0, stepNumber + 1);
@@ -56,9 +54,6 @@ export default function Game() {
     setBoardHistory([...timeInHistory, squares]);
     setStepNumber(timeInHistory.length);
     setXisNext(!xIsNext);
-    console.log("step", stepNumber);
-    console.log("history", boardHistory);
-    console.log(stepNumber);
     stepNumber < 4 && AImove(squares);
   };
 
