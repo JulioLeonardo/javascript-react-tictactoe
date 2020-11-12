@@ -38,11 +38,13 @@ export default function Game() {
   };
 
   const AImove = (squares) => {
+    if (calculateWinner(squares)) return;
     const move = bestMove(squares);
     squares[move] = "O";
     setBoardHistory([...boardHistory, squares]);
     setStepNumber(boardHistory.length);
     setXisNext(!xIsNext);
+    clearTimeout();
   };
 
   const handleClickAI = (i) => {
@@ -54,7 +56,7 @@ export default function Game() {
     setBoardHistory([...timeInHistory, squares]);
     setStepNumber(timeInHistory.length);
     setXisNext(!xIsNext);
-    stepNumber < 4 && AImove(squares);
+    stepNumber < 4 && setTimeout(() => AImove(squares), 200);
   };
 
   const previousMove = () => {
