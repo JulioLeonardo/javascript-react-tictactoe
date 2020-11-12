@@ -6,11 +6,10 @@ import "./styles.css";
 export default function Game() {
   const [boardHistory, setBoardHistory] = useState([Array(9).fill(null)]);
   const [stepNumber, setStepNumber] = useState(0);
+  const [humanGame, setHumanGame] = useState(true);
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(boardHistory[stepNumber]);
   const currentBoard = boardHistory[stepNumber];
-
-  const checkWinner = () => {};
 
   const handleClickHuman = (i) => {
     const timeInHistory = boardHistory.slice(0, stepNumber + 1);
@@ -23,6 +22,43 @@ export default function Game() {
     setXisNext(!xIsNext);
   };
 
+  const bestMove = (squares) => {
+    let squareValue = true;
+    let index;
+
+    while (squareValue) {
+      console.log("eu 2", index);
+      const random = Math.floor(Math.random() * 9);
+      if (!squares[random]) {
+        index = random;
+        console.log("eu", index);
+        squareValue = false;
+      }
+    }
+    console.log(index);
+    return index;
+  };
+
+  const AImove = (squares) => {
+    const move = bestMove(squares);
+    squares[move] = "O";
+    setBoardHistory([...boardHistory, squares]);
+    setStepNumber(boardHistory.length);
+    setXisNext(!xIsNext);
+  };
+
+  const handleClickAI = (i) => {
+    const timeInHistory = boardHistory.slice(0, stepNumber + 1);
+    const current = timeInHistory[stepNumber];
+    const squares = [...current];
+    if (winner || squares[i]) return;
+    squares[i] = "X";
+    setBoardHistory([...timeInHistory, squares]);
+    setStepNumber(timeInHistory.length);
+    setXisNext(!xIsNext);
+    AImove(squares);
+  };
+
   const previousMove = () => {
     if (stepNumber !== 0) {
       setStepNumber(stepNumber - 1);
@@ -31,11 +67,16 @@ export default function Game() {
   };
 
   const startHumanVsHumanGame = () => {
+    setHumanGame(true);
     setStepNumber(0);
     setXisNext(true);
   };
 
-  const startHumanVsAIgame = () => {};
+  const startHumanVsAIgame = () => {
+    setHumanGame(false);
+    setStepNumber(0);
+    setXisNext(true);
+  };
 
   return (
     <div className="game">
@@ -50,7 +91,9 @@ export default function Game() {
           </p>
         </div>
         <div className="controls">
-          <button onClick={() => previousMove()}>Previous Move</button>
+          {humanGame && (
+            <button onClick={() => previousMove()}>Previous Move</button>
+          )}
           <button onClick={() => startHumanVsHumanGame()}>
             Start Human x Human Game
           </button>
@@ -59,7 +102,11 @@ export default function Game() {
           </button>
         </div>
       </div>
-      <Board squares={currentBoard} onClick={handleClickHuman} />
+      {humanGame ? (
+        <Board squares={currentBoard} onClick={handleClickHuman} />
+      ) : (
+        <Board squares={currentBoard} onClick={handleClickAI} />
+      )}
     </div>
   );
 }
