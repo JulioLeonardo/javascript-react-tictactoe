@@ -27,15 +27,13 @@ export default function Game() {
     let index;
 
     while (squareValue) {
-      console.log("eu 2", index);
       const random = Math.floor(Math.random() * 9);
       if (!squares[random]) {
         index = random;
-        console.log("eu", index);
+        console.log(index);
         squareValue = false;
       }
     }
-    console.log(index);
     return index;
   };
 
@@ -45,7 +43,9 @@ export default function Game() {
     setBoardHistory([...boardHistory, squares]);
     setStepNumber(boardHistory.length);
     setXisNext(!xIsNext);
+    console.log("AI", boardHistory, stepNumber);
   };
+  console.log("AI fora", boardHistory, stepNumber);
 
   const handleClickAI = (i) => {
     const timeInHistory = boardHistory.slice(0, stepNumber + 1);
@@ -56,7 +56,10 @@ export default function Game() {
     setBoardHistory([...timeInHistory, squares]);
     setStepNumber(timeInHistory.length);
     setXisNext(!xIsNext);
-    AImove(squares);
+    console.log("step", stepNumber);
+    console.log("history", boardHistory);
+    console.log(stepNumber);
+    stepNumber < 4 && AImove(squares);
   };
 
   const previousMove = () => {
@@ -67,12 +70,14 @@ export default function Game() {
   };
 
   const startHumanVsHumanGame = () => {
+    setBoardHistory([Array(9).fill(null)]);
     setHumanGame(true);
     setStepNumber(0);
     setXisNext(true);
   };
 
   const startHumanVsAIgame = () => {
+    setBoardHistory([Array(9).fill(null)]);
     setHumanGame(false);
     setStepNumber(0);
     setXisNext(true);
