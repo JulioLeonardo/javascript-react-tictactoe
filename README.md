@@ -17,7 +17,7 @@
 </h1>
 
 <h4 align="center"> 
-	Project deployed through Netlify on: <a href="https://https://unruffled-jang-a400e7.netlify.app/" target="_blank">Tic Tac Toe</a>  
+	Project deployed through Netlify on: <a href="https://unruffled-jang-a400e7.netlify.app/" target="_blank">Tic Tac Toe</a>  
 </h4>
 
 <h1 id="screenshot">
